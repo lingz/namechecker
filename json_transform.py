@@ -14,7 +14,7 @@ def main():
     with open(filename, 'rb') as jsonfile:
         data = json.loads(jsonfile.read())
         print len(data["data"])
-        print "\n".join(map(lambda x: x["name"], data["data"]))
+        print u"\n".join(map(lambda x: unicode(x["name"]), data["data"]))
 
 if __name__ == "__main__":
     main()
